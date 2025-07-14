@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Exercise {
     
     public static void main (String[] args) {
@@ -13,6 +17,26 @@ public class Exercise {
         System.out.println(numbers[i]);
     }
         System.out.println(numbers.length +"  is the length of the numbers array");
+
+    List<String> aList = new ArrayList<String>();
+    aList.add("hello");
+    aList.add("hai");
+    aList.add("how");
+    aList.add("are");
+    aList.add("you");
+
+    for(int i =0; i< aList.size();i++){
+        System.out.println(aList.get(i));
+    }
+    System.out.println("*******************");
+
+    String[] name = {"abi","anu","bala","kiki","daya","arun","kumar"};
+    List<String> StringArray = Arrays.asList(name);
+    for(String s: StringArray)
+    {
+        System.out.println(s);
+    }
+
     }
 
 }
