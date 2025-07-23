@@ -18,7 +18,6 @@ public static void main(String[] args) throws InterruptedException {
     while(i < 5)
     {
         driver.findElement(By.cssSelector("div[data-testid='Adult-testID-plus-one-cta']")).click();
-        System.out.print("**********");
         i++;
     }
     System.out.println(driver.findElement(By.xpath("//div[contains(text(),'Adult')]")).getText());
