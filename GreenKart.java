@@ -1,5 +1,6 @@
-package selenium;
+package main;
 
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 
@@ -7,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 public class GreenKart {
 
@@ -15,7 +17,7 @@ public class GreenKart {
         WebDriver driver = new ChromeDriver();
         String[] itemsNeeded = { "Pomegranate", "Cauliflower", "Brinjal" };
         driver.get("https://rahulshettyacademy.com/seleniumPractise/");
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         List<WebElement> productList = driver.findElements(By.cssSelector("h4[class='product-name']"));
         int j = 0;
@@ -35,6 +37,15 @@ public class GreenKart {
                 }
             }
         }
+
+        driver.findElement(By.cssSelector("img[alt='Cart']")).click();
+        driver.findElement(By.cssSelector("div[class='cart-preview active'] button[type='button']")).click();
+        driver.findElement(By.cssSelector("input[class='promoCode']")).sendKeys("rahulshettyacademy");
+        driver.findElement(By.cssSelector("button.promoBtn")).click();
+        Assert.assertEquals(driver.findElement(By.cssSelector("span.promoInfo")).getText(), "Code applied ..!");
+
+        driver.findElement(By.xpath("//button[normalize-space()='Place Order']")).click();
+
     }
 
 }

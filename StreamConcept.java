@@ -1,4 +1,4 @@
-package selenium;
+package main;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,7 +46,6 @@ public class StreamConcept {
 
         System.out.println(flag);
         Assert.assertTrue(flag);
-
     }
 
 }

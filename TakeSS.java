@@ -1,4 +1,4 @@
-package selenium;
+package main;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,10 +14,10 @@ public class TakeSS {
     public static void main(String[] args) throws IOException {
 
         WebDriver driver = new ChromeDriver();
-        driver.get("https://workspace.google.com/gmail/");
+        driver.get("https://github.com/abinayaavel/SeleniumWithCoreJava");
         File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(src,
-                new File("D:\\screenshots\\screenshot.png"));
+                new File("C:\\Users\\Admin\\Desktop\\selenium-java\\seleniumIntro\\bin\\screenshots\\screenshot.png"));
 
     }
 

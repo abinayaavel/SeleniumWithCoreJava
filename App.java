@@ -1,3 +1,5 @@
+package main;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +13,7 @@ public class App {
         System.out.println("Hello, World!");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        
+
         // Corrected URL
         driver.get("https://www.youtube.com");
 

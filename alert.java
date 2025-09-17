@@ -1,3 +1,5 @@
+package main;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,13 +16,11 @@ public class alert {
 
         driver.findElement(By.cssSelector("input#alertbtn")).click();
 
-        System.out.println(driver.switchTo().alert().getText()+" ***********");
+        System.out.println(driver.switchTo().alert().getText() + " ***********");
         driver.switchTo().alert().accept();
 
         driver.findElement(By.cssSelector("input#confirmbtn")).click();
         driver.switchTo().alert().dismiss();
-
-        
     }
-    
+
 }

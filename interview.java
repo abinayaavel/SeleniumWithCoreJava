@@ -1,3 +1,5 @@
+package main;
+
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -9,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class interview {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -25,9 +27,7 @@ public class interview {
         Thread.sleep(3000);
 
         driver.quit();
-    
 
     }
 
-    
 }

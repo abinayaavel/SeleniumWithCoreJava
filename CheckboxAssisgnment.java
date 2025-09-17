@@ -1,3 +1,5 @@
+package main;
+
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -9,7 +11,7 @@ import org.testng.Assert;
 public class CheckboxAssisgnment {
 
     public static void main(String[] args) {
-        
+
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
@@ -23,15 +25,11 @@ public class CheckboxAssisgnment {
         driver.findElement(By.cssSelector(cssSelector_checkBox)).click();
         Assert.assertFalse(driver.findElement(By.cssSelector(cssSelector_checkBox)).isSelected());
 
-
         // Count the no of Checkboxes
 
         List<WebElement> countOfCheckboxes = driver.findElements(By.cssSelector("input[type='checkbox']"));
-        System.out.println("There are "+countOfCheckboxes.size() +" checkboxes in this webpage");
+        System.out.println("There are " + countOfCheckboxes.size() + " checkboxes in this webpage");
 
-
-
-       
     }
-    
+
 }

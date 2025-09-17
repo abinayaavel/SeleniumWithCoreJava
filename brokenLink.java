@@ -1,4 +1,4 @@
-package selenium;
+package main;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -10,14 +10,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.asserts.SoftAssert;
 
 public class brokenLink {
 
     public static void main(String[] args) throws MalformedURLException, IOException {
 
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+
+        WebDriver driver = new ChromeDriver(options);
         driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 
         List<WebElement> links = driver.findElements(By.cssSelector("li.gf-li a"));
@@ -38,7 +41,5 @@ public class brokenLink {
 
         }
         softAssert.assertAll();
-
     }
-
 }

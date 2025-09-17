@@ -1,14 +1,16 @@
+package main;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
+//import org.testng.Assert;
 
 public class UILocatorsAssignment {
 
     public static void main(String[] args) {
-        
+
         WebDriver driver = new ChromeDriver();
         driver.get("https://rahulshettyacademy.com/angularpractice/");
         driver.manage().window().maximize();
@@ -25,6 +27,7 @@ public class UILocatorsAssignment {
         driver.findElement(By.cssSelector("input[name='bday']")).sendKeys("24-10-2025");
 
         driver.findElement(By.cssSelector("input[value='Submit']")).click();
-        System.out.println(driver.findElement(By.cssSelector("div[class='alert alert-success alert-dismissible']")).getText());
+        System.out.println(
+                driver.findElement(By.cssSelector("div[class='alert alert-success alert-dismissible']")).getText());
     }
 }

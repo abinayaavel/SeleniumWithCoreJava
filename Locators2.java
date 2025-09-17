@@ -1,3 +1,5 @@
+package main;
+
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -11,7 +13,7 @@ public class Locators2 {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
-        String name ="abi";
+        String name = "abi";
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://rahulshettyacademy.com/locatorspractice/");
 
@@ -25,14 +27,15 @@ public class Locators2 {
 
         Assert.assertEquals(driver.findElement(By.tagName("p")).getText(), "You are successfully logged in.");
 
-        Assert.assertEquals(driver.findElement(By.cssSelector("div[class='login-container'] h2")).getText(), "Hello "+name+",");
+        Assert.assertEquals(driver.findElement(By.cssSelector("div[class='login-container'] h2")).getText(),
+                "Hello " + name + ",");
         driver.findElement(By.xpath("//button[text()='Log Out']")).click();
         driver.close();
-        
+
     }
 
     public static String getPassword(WebDriver driver) throws InterruptedException
-    
+
     {
         driver.findElement(By.linkText("Forgot your password?")).click();
         Thread.sleep(2000);
@@ -41,7 +44,6 @@ public class Locators2 {
         String password = driver.findElement(By.cssSelector("form p")).getText().split("'")[1].split("'")[0];
         return password;
 
-
     }
-    
+
 }

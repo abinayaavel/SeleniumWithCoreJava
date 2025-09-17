@@ -1,14 +1,14 @@
-package selenium;
+package main;
 
 import java.util.List;
-import java.util.stream.Collector;
+//import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
+//import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 public class StreamsDemo {

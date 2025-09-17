@@ -1,4 +1,4 @@
-package selenium;
+package main;
 
 import java.util.Map;
 import java.util.stream.Collectors;
